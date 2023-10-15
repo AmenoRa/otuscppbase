@@ -1,2 +1,2 @@
 # otuscppbase
-education
+education in Otus
