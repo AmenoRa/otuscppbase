@@ -3,6 +3,6 @@
 
 #include <string>
 
-char introducing();
+std::string introducing();
 
 #endif //INC_03_HOMEWORK_INTRODUCING_H

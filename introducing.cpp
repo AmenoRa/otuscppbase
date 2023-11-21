@@ -3,12 +3,14 @@
 #include "introducing.h"
 
 
-char introducing() {
-    char username;
+std::string introducing() {
+
+    std::string name;
     std::cout << "Enter your name, pls." << std::endl;
-    std::cin >> username;
+    std::cin >> name;
 
     std::cout << "Hi!" << std::endl;
 
-    return username;
+    return name;
+
 }

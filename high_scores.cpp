@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-void highscores(char user_name, int attempts_count) {
+void highscores(std::string currentname, int attempts_count) {
 
 	const std::string high_scores_filename = "high_scores.txt";
 
@@ -21,7 +21,7 @@ void highscores(char user_name, int attempts_count) {
 	//}
 
 	// Write new high score to the records table
-	{
+//	{
 		// We should open the output file in the append mode - we don't want
 		// to erase previous results.
 		std::ofstream out_file{high_scores_filename, std::ios_base::app};
@@ -31,10 +31,10 @@ void highscores(char user_name, int attempts_count) {
 		}
 
 		// Append new results to the table:
-		out_file << user_name << ' ';
+		out_file << currentname << ' ';
 		out_file << attempts_count;
 		out_file << std::endl;
-	} // end of score here just to mark end of the logic block of code
+//	} // end of score here just to mark end of the logic block of code
 
 	// Read the high score file and print all results
 	{
@@ -46,11 +46,11 @@ void highscores(char user_name, int attempts_count) {
 
 		std::cout << "High scores table:" << std::endl;
 
-		std::string username;
+		std::string user_name;
 		int high_score = 0;
 		while (true) {
 			// Read the username first
-			in_file >> username;
+			in_file >> user_name;
 			// Read the high score next
 			in_file >> high_score;
 			// Ignore the end of line symbol
@@ -61,7 +61,7 @@ void highscores(char user_name, int attempts_count) {
 			}
 
 			// Print the information to the screen
-			std::cout << username << '\t' << high_score << std::endl;
+			std::cout << user_name << '\t' << high_score << std::endl;
 		}
 	}
 

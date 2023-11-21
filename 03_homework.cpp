@@ -13,7 +13,8 @@ int main(int argc, char** argv) {
 
     int randomnumber = random_value(maxnumber);
 
-    char username = introducing();
+
+    std::string username = introducing();
 
     std::cout << "Let's play, " << username << "!" << std::endl;
     std::cout << "Guess the number." << std::endl;

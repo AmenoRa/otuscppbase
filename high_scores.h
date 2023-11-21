@@ -5,6 +5,6 @@
 #ifndef INC_03_HOMEWORK_HIGH_SCORES_H
 #define INC_03_HOMEWORK_HIGH_SCORES_H
 
-void highscores(char user_name, int attempts_count);
+void highscores(std::string currentname, int attempts_count);
 
 #endif //INC_03_HOMEWORK_HIGH_SCORES_H
