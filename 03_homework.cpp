@@ -7,7 +7,7 @@
 #include "high_scores.h"
 
 
-int main(int argc, char** argv) {
+int main() { //int argc, char** argv
 
     int maxnumber = 100;
 
